@@ -4,7 +4,7 @@
 
 For this project, I've decided to create a **children's fable generator**, mixing some narrative and characters from classic fables.
 
-At the end, our character makes use of the _'Gruffalo'_ character as a way to get rid of their threatening opponent.
+At the end, our hero makes use of the _'Gruffalo'_ character as a way to get rid of their threatening opponent.
 
 I hope you enjoy!
 
