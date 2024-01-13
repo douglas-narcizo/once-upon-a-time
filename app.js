@@ -2,7 +2,7 @@
 const storyDom = document.querySelector('.story');
 const generate = document.getElementById('generate');
 
-generate.addEventListener('click', generateStory);
+generate.onclick = generateStory;
 
 
 // Select a random item from a given array
@@ -21,6 +21,8 @@ const baits = ['apple', 'candy', 'cookie'];
 const intro = [`Once upon a time,`, `Long, long ago,`, `In a land of giggles and sunshine,`, `It's used to say… that`];
 const goodAdjective = ['beautiful', 'gorgeous', 'cheerful', 'pacific', 'peaceful'];
 const scaryFeature = ['suspicious', 'scary', 'hunchbacked', 'frightening'];
+const cuteAdjective = ['little','lovely','sweet','pretty'];
+const tastyAdjective = ['delicious','tasty','luscious'];
 const vilainExcuse = [`I've just remembered how to return to my way. Thanks and bye!`, `I think I have found the way to get back home. Bye bye!!`,
                         `I have to go now. Nice to meet you… bye!`];
 const ending = [`And so, they lived happily ever after!`, `After this, they never met each other again, and lived forever in happiness!`,
@@ -43,14 +45,14 @@ function generateStory() {
         `${randomItem(intro)} in a ${randomItem(goodAdjective)} ${theEnvironment}, lived a little ${mainCharacter[0]}.`,
         `On a certain ${theTime}, ${mainCharacter[1]} went out to visit ${mainCharacter[2]} ${theRelative}.`,
         `While ${mainCharacter[1]} walked through the ${theEnvironment}, the ${mainCharacter[0]} met a ${randomItem(scaryFeature)} ${theVilain[0]}.`,
-        `Then, the ${theVilain[0]} said – "Hello, little ${mainCharacter[0]}!", and continued:`,
+        `The ${theVilain[0]} said – "Hello, ${randomItem(cuteAdjective)} ${mainCharacter[0]}!", and continued…`,
         `"I got lost, and now I reached this ${randomItem(goodAdjective)} ${theEnvironment}…\n
-            If you help me, I will give you this ${theBait}!"`,
+            If you help me, I will give you this ${randomItem(tastyAdjective)} ${theBait}!"`,
         `But the smart ${mainCharacter[0]} then responded:`,
         `"Thank you, ${theVilain[1]}! But I can't accept your ${theBait}.\n
             I agreed to have a snack with a Gruffalo in a little while."`,
         `And the ${theVilain[0]}, that had already heard about the Gruffalo's reputation, then said:`,
-        `"A Gruffalo?!! Well… excuse me, little ${mainCharacter[0]}… but ${randomItem(vilainExcuse)}"`,
+        `"A Gruffalo?!! Well… excuse me, ${randomItem(cuteAdjective)} ${mainCharacter[0]}… but ${randomItem(vilainExcuse)}"`,
         `${randomItem(ending)}`
     ];
     
